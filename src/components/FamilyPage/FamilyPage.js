@@ -8,6 +8,7 @@ import * as contentful from "contentful";
 
 export default function FamilyPage() {
 	const [images, setImages] = useState();
+	console.log(images)
 
 
 	const client = contentful.createClient({

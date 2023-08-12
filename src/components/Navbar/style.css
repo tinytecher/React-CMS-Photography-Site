@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	text-align: center;
+	margin-top: 32px;
+}
+
+.home-title {
+	font-family: "Great Vibes", cursive;
+	font-size: 47px;
+	color: #3a3a3a;
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	margin-left: 29px;
+	margin-bottom: 20px;
+}
+
+ul {
+	flex-direction: row;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+li {
+	display: inline-block;
+	/* padding: 12px; */
+	margin-right: 29px;
+	font-size: 16px;
+}
+
+li a {
+	color: #3a3a3a;
+	text-decoration: none;
+
+}

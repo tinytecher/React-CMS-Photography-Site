@@ -1,0 +1,120 @@
+
+.main-container > div > div {
+	background-color: rgb(98, 182, 151);
+	border: 1px solid black;
+	margin: 1px;
+	height: 1000px;
+}
+
+.main-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 95vw;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	padding:2px;
+}
+
+.main-col1,
+.main-col2 {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.man  {
+	height: 700px;
+}
+
+.man > img {
+	height: 50%;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.flip {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  min-width: 400px;
+  max-width: 450px;
+  max-height: 320px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  background-color: #91b5b3;
+  font-size: 16px;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.flip * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+figure.flip img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+figure.flip figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% -50%;
+  -ms-transform-origin: 50% -50%;
+  transform-origin: 50% -50%;
+  z-index: 1;
+  opacity: 0;
+  padding: 10px 30px;
+}
+figure.flip h3,
+figure.flip p {
+  line-height: 1.5em;
+}
+figure.flip h3 {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+figure.flip p {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+figure.flip .read-more {
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+}
+figure.flip .read-more:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+figure.flip:hover img,
+figure.flip.hover img {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+figure.flip:hover figcaption,
+figure.flip.hover figcaption {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}

@@ -1,0 +1,20 @@
+
+
+.maternity-container{
+    display: flex;
+	justify-content: center;
+	/* height: 700px; */
+	flex-wrap: wrap;
+	width: 95vw;
+	margin: 0 auto;
+}
+
+
+.maternity-images {
+    display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 400px;
+	margin: 4px;
+	row-gap: 4px;
+}

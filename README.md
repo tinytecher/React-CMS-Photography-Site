@@ -75,3 +75,9 @@ The project is organized into the following directories:
     The app is designed with accessibility in mind, utilizing CSS Modules and converting from pixels to rem for enhanced styling and user experience.
 
 4. **Stretch Goals**
+
+
+## ISSUES FACED
+
+- issue with deploy. getting 404 when clicking on links to other pages
+- Resolved by adding a netlify.toml file at the root and a _redirects in public

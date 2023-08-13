@@ -6,7 +6,7 @@ Welcome to the Forte-Photography React App, a platform for showcasing stunning p
 
 ## Deployed on Netlify
 
-The app is deployed and accessible on Netlify at [link](link).
+The app is deployed and accessible on Netlify at [https://react-next-photography-site.netlify.app](https://react-next-photography-site.netlify.app).
 
 ## Getting Started
 

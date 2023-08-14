@@ -24,7 +24,7 @@ export default function MaternityPage() {
 			});
 
 			let assetData = entries.includes.Asset;
-
+	
 	
 			setImages(assetData);
 		} catch (error) {

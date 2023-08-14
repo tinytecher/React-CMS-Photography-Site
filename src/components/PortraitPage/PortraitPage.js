@@ -38,12 +38,12 @@ getImages()
 		<>
 			<NavBar />
 			<div className="page-title">
-			<h2>Family</h2>
+			<h2>Portraits</h2>
 			</div>
-			<div className='maternity-container'>
+			<div className='portrait-container'>
 			{images && images.map((item) => {
 			const url = "http:" + item.fields.file.url;
-			return(<img className="maternity-images" src={url} alt="dw"></img>)
+			return(<img className="portrait-images" src={url} alt="dw"></img>)
 				
 			})}
 			</div>

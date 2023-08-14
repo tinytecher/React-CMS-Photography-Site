@@ -1,12 +1,29 @@
+.about-container > div > div {
+	background-color: rgb(98, 182, 151);
+	border: 1px solid black;
+	margin: 2px;
+	height: 1000px;
+}
+
 .about-container {
 	display: flex;
-    flex-direction: column;
 	justify-content: center;
 	/* height: 700px; */
 	flex-wrap: wrap;
 	width: 95vw;
 	margin: 0 auto;
-	background-color: beige;
 }
 
+.about-title {
+	
+}
+
+.about-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	margin: 1rem;
+	line-height: 25px;
+}
 

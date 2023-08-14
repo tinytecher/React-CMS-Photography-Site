@@ -11,6 +11,7 @@ import MaternityPage from "../MaternityPage/MaternityPage";
 import FamilyPage from "../FamilyPage/FamilyPage";
 import WeddingPage from "../WeddingPage/WeddingPage";
 import HomePageTwo from "../HomePageTwo/HomePageTwo.js"
+import PortraitPage from "../PortraitPage/PortraitPage.js";
 
 import {
 	ContentfulClient,
@@ -58,6 +59,10 @@ console.log(myData)
 					<Route
 						path='/family'
 						element={<FamilyPage />}
+					></Route>
+					<Route
+						path='/portrait'
+						element={<PortraitPage />}
 					></Route>
 				</Routes>
 			</Router>

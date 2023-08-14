@@ -3,12 +3,6 @@ import NavBar from "../Navbar/NavBar.js";
 import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
 import * as contentful from "contentful";
-// import mat1 from "../../images/maternity/mat1.jpg";
-// import mat2 from "../../images/maternity/mat2.jpg";
-// import mat3 from "../../images/maternity/mat3.jpg";
-// import mat4 from "../../images/maternity/mat4.jpg";
-// import mat5 from "../../images/maternity/mat5.jpg";
-// import mat6 from "../../images/maternity/mat6.jpg";
 
 
 export default function MaternityPage() {
@@ -30,8 +24,7 @@ export default function MaternityPage() {
 			});
 
 			let assetData = entries.includes.Asset;
-			// const url = "http:" + assetData[0].fields.file.url;
-			// console.log("AssetData", assetData[0].fields.file.url);
+
 	
 			setImages(assetData);
 		} catch (error) {
@@ -45,6 +38,9 @@ getImages()
 	return (
 		<>
 			<NavBar />
+			<div className="page-title">
+			<h2>Maternity</h2>
+			</div>
 			<div className='maternity-container'>
 			{images && images.map((item) => {
 			const url = "http:" + item.fields.file.url;
@@ -53,32 +49,6 @@ getImages()
 			})}
 			</div>
 			<Footer />
-
-				{/* <div className='maternity-col1'>
-					<img
-						src={maternity}
-						className='maternity1'
-						alt='maternity1'
-						style={{ flex: 1 }}
-					/>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-				</div>
-				<div className='maternity-col2'>
-					<img
-						src={maternity}
-						className='maternity1'
-						alt='maternity1'
-						style={{ flex: 1 }}
-					></img>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-				</div>
-				<div className='maternity-col3'>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-				</div> */}
 		</>
 	);
 }

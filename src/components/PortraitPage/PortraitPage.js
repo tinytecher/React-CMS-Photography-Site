@@ -1,39 +1,51 @@
-import React from "react";
 import "./style.css";
 import NavBar from "../Navbar/NavBar.js";
 import Footer from "../Footer/Footer";
-import portrait1 from "../../images/portrait.jpg";
+import { useEffect, useState } from "react";
+import * as contentful from "contentful";
 
-export default function PortraitPage() {
+
+export default function FamilyPage() {
+	const [images, setImages] = useState();
+
+
+	const client = contentful.createClient({
+		space: "zn0gciemmdui",
+		accessToken:
+			"d7lRCfp0zDlmeAiUsFO94ZxylnEzeVke0dASWFNMWHQ",
+	});
+
+	useEffect(()=>{
+	async function getImages() {
+		try {
+			const entries = await client.getEntries({
+				content_type: "portraits",
+				select: "fields",
+			});
+
+			let assetData = entries.includes.Asset;
+	
+			setImages(assetData);
+		} catch (error) {
+			console.log(`Error fetching authors ${error}`);
+		}
+	}
+		
+getImages()
+	},[client])
+
 	return (
 		<>
 			<NavBar />
-			<div className='portrait-container'>
-				<div className='portrait-col1'>
-					<img
-						src={portrait1}
-						className='portrait1'
-						alt='portrait'
-						style={{ flex: 1 }}
-					></img>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-				</div>
-				<div className='portrait-col2'>
-					<img
-						src={portrait1}
-						className='wed1'
-						alt='wed'
-						style={{ flex: 1 }}
-					></img>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-				</div>
-				<div className='portrait-col3'>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-					<div style={{ flex: 1 }}></div>
-				</div>
+			<div className="page-title">
+			<h2>Family</h2>
+			</div>
+			<div className='maternity-container'>
+			{images && images.map((item) => {
+			const url = "http:" + item.fields.file.url;
+			return(<img className="maternity-images" src={url} alt="dw"></img>)
+				
+			})}
 			</div>
 			<Footer />
 		</>

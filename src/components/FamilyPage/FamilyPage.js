@@ -1,4 +1,3 @@
-
 import "./style.css";
 import NavBar from "../Navbar/NavBar.js";
 import Footer from "../Footer/Footer";
@@ -8,7 +7,6 @@ import * as contentful from "contentful";
 
 export default function FamilyPage() {
 	const [images, setImages] = useState();
-	console.log(images)
 
 
 	const client = contentful.createClient({
@@ -21,13 +19,11 @@ export default function FamilyPage() {
 	async function getImages() {
 		try {
 			const entries = await client.getEntries({
-				content_type: "weddings",
+				content_type: "family",
 				select: "fields",
 			});
 
 			let assetData = entries.includes.Asset;
-			// const url = "http:" + assetData[0].fields.file.url;
-			// console.log("AssetData", assetData[0].fields.file.url);
 	
 			setImages(assetData);
 		} catch (error) {
@@ -41,14 +37,16 @@ getImages()
 	return (
 		<>
 			<NavBar />
-			{/* <div className='wedding-container'>
+			<div className="page-title">
+			<h2>Family</h2>
+			</div>
+			<div className='maternity-container'>
 			{images && images.map((item) => {
 			const url = "http:" + item.fields.file.url;
-			return(<img className="wedding-images" src={url} alt="dw"></img>)
+			return(<img className="maternity-images" src={url} alt="dw"></img>)
 				
 			})}
-			</div> */}
-			<h2>add family images here...</h2>
+			</div>
 			<Footer />
 		</>
 	);
